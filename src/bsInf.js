@@ -13,6 +13,7 @@
 
     bsInf.browser = getBrowser(navigator.userAgent, window);
     bsInf.os = getOs(navigator.userAgent);
+    // TODO: add geo location.
 
     function getBrowser(ua, window){
       var result = {};
@@ -33,7 +34,7 @@
           return result;
         }
       }
-      
+
       if(!(window.ActiveXObject) && "ActiveXObject" in window) {
         result.name = 'ie';
         result.version = '11';
