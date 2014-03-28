@@ -11,7 +11,7 @@
           }
 
       for(var property in bsInf) {
-        if (bsInf.hasOwnProperty(property)){
+        if (bsInf.hasOwnProperty(property) && property.indexOf('__') < 0){
           output += '<div class="line">';
           output += '<div class="header label">' + stringify(property) + '</div>'
 
@@ -32,10 +32,10 @@
   </script>
 </head>
 <body onload='showDemo();'>
-<h1>Browser System Information</h1>
-<h2>Light weight lib that provides information about browser, system, geolocation and etc user's information available on the client</h2>
+  <h1>Browser System Information</h1>
+  <h2>Light weight lib that provides information about browser, system, geolocation and etc user's information available on the client</h2>
 
-<div id='content'></div>
+  <div id='content'></div>
 
 </body>
 </html>
