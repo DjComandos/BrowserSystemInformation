@@ -1,0 +1,41 @@
+<html>
+<head>
+  <title>Browser System Information</title>
+  <link rel='stylesheet' href='demo.css'></link>
+  <script type='text/javascript' src='src/bsInf.js'></script>
+  <script type='text/javascript'>
+    function showDemo() {
+      var output = '',
+          stringify = function (name) {
+            return (name || '').match(/[A-Z]?[a-z]+/g).join(' ').toLowerCase();
+          }
+
+      for(var property in bsInf) {
+        if (bsInf.hasOwnProperty(property)){
+          output += '<div class="line">';
+          output += '<div class="header label">' + stringify(property) + '</div>'
+
+          for(var key in bsInf[property]) {
+            if (bsInf[property].hasOwnProperty(key)){
+              output += '<div class="propertyName left label">' + 
+                  stringify(key) + '</div>';
+              output += '<div class="propertyValue left">' + 
+                  bsInf[property][key] + '</div>';
+            }
+          }
+          output += '</div>';
+        }
+      }
+
+      document.getElementById('content').innerHTML = output;
+    }
+  </script>
+</head>
+<body onload='showDemo();'>
+<h1>Browser System Information</h1>
+<h2>Light weight lib that provides information about browser, system, geolocation and etc user's information available on the client</h2>
+
+<div id='content'></div>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+h1,h2 {
+  font-family: 'Skolar Bold',Palatino,Cambria,"Droid Serif",Georgia,"Times New Roman",Times,serif;
+}
+#content {
+  text-align: center;
+}
+.line {
+  clear: both;
+}
+.label {
+  width: 200px;
+  text-align: right;
+  padding: 10px 20px;
+}
+.header {
+  clear: both;
+  font-size: 1.5em;
+  font-family: 'Skolar Bold',Palatino,Cambria,"Droid Serif",Georgia,"Times New Roman",Times,serif;
+}
+.header::after {
+  content: ":"
+}
+.left {
+  float: left;
+}
+.propertyName,
+.propertyValue {
+  border: 1px solid #ddd;
+  margin: 2px;
+  font-family: 'Proxima Nova Regular', 'Helvetica Neue', Calibri, 'Droid Sans', Helvetica, Arial, sans-serif;
+  font-size: 1.1em;
+}
+.propertyName {
+  clear: left;
+  background: #ddd;
+}
+.propertyValue {
+  padding: 10px 20px;
+  width: 400px;
+  text-align: left;
+}
