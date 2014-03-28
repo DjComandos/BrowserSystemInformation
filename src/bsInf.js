@@ -45,9 +45,7 @@
 
     function getOs(){
       var result = {};
-
       // TODO: implement it.
-
       return result;
     }
 
