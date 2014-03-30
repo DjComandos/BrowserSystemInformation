@@ -13,6 +13,7 @@
 
     bsInf.browser = getBrowser(navigator.userAgent, window);
     bsInf.os = getOs(navigator.userAgent);
+    // TODD: add device detection.
     // TODO: add geo location.
 
     function getBrowser(ua, window){
